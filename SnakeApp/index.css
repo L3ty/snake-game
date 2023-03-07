@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #262626;
+    color: #eeeeee;
+  }
+
+  a{
+    background-color: #eeeeee ;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color:  #262626;
+    text-decoration: none;
+  }
+  a:hover{
+    background-color: #4f4f4f ;
+}
+
+input{
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
