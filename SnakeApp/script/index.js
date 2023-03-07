@@ -3,30 +3,36 @@ import {
   draw as drawSnake,
   SnakeSpeed,
   getSnakeHead,
-   snakeInterSection,
+  snakeInterSection,
 } from "./snake.js";
 import { update as updateFood, draw as drawFood } from "./food.js";
 import { outsideGrid } from "./grid.js";
 
 const board = document.getElementById("board");
+const playerElement = document.getElementById("player");
+const scoreElement = document.getElementById("score");
 
 let lastRender = 0;
 let gameOver = false;
 
-
 requestAnimationFrame(main);
 
+playerElement.innerText = `Player: ${new URLSearchParams(
+  window.location.search
+).get("name")}`;
+
 const score = {
-    value: 0,
-    increase () {
-      this.value = this.value + 1
-    }
-}
+  value: 0,
+  increase() {
+    this.value = this.value + 1;
+    scoreElement.innerText = `Score: ${this.value}`;
+  },
+};
 
 function main(currentTime) {
   if (gameOver) {
     if (confirm("GAME OVER!")) {
-      location = "/game.html";
+      window.location.reload();
     }
     return;
   }

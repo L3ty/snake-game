@@ -11,14 +11,15 @@ body {
     color: #eeeeee;
   }
 
-  a{
+  button{
     background-color: #eeeeee ;
     padding: 0.5em;
     border-radius: 0.5em;
     color:  #262626;
-    text-decoration: none;
+    border: none;
+    margin: 0.5em;
   }
-  a:hover{
+  button:hover{
     background-color: #4f4f4f ;
 }
 
